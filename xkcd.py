@@ -9,7 +9,7 @@ if i.status_code == 200:
 	title = image.get("title")
 	img = url.rsplit('/')[-1]
 	img_url = requests.get(url)
-	with open(img, 'wb') as out_file:
+	with open(img, 'wb+') as out_file:
 		out_file.write(img_url.content)
 print("Comic no: "+str(random))
 print("Caption: "+text)
